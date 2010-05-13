@@ -1,1 +1,35 @@
-Coming soon.
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>simonbaird.github.com</title>
+
+		<link href="styles.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script>
+		<script type="text/javascript" src="http://randomibis.com/coolclock/coolclock.js"></script>
+
+		<script type="text/javascript">
+
+			$.extend(CoolClock.config.skins,{
+				fooskin: {
+					hourHand:         { lineWidth: 80, startAt: -15, endAt: 35,  color: "cyan",    alpha: 0.5 },
+					minuteHand:       { lineWidth: 80, startAt: -15, endAt: 65,  color: "magenta", alpha: 0.5 },
+					secondDecoration: { lineWidth: 1,  startAt: 40,  radius: 40, color: "#fff", fillColor: "yellow", alpha: 0.5 }
+				}
+			});
+
+		</script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="message">
+				<p>simonbaird.github.com</p>
+				<p>coming soon...</p>
+				<p class="links">
+					<a href="http://github.com/simonbaird">github.com/simonbaird</a>
+				</p>
+			</div>
+			<canvas class="CoolClock:fooskin:150"></canvas>
+		</div>
+	</body>
+</html>
