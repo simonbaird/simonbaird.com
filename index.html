@@ -17,18 +17,40 @@ $.extend(CoolClock.config.skins,{
 	}
 });
 
+$(function(){
+	var link = $(this).attr('href');
+	$('.links a').hover(
+		function(){
+			var link = $(this).attr('href').replace(/^http:\/\//,'');
+			$('#showlink').css('visibility','visible').stop().html(link).fadeTo('fast',1.0);
+		},
+		function(){
+			$('#showlink').stop().fadeTo('slow',0.0);
+		}
+	);
+});
+
 </script>
 </head>
 <body>
 <div class="wrapper">
 	<div class="message">
-		<p>simonbaird.github.com</p>
-		<p>coming soon...</p>
+		<p class="title">simonbaird.com</p>
+		<p style="visibility:hidden" id="showlink">simonbaird.com</p>
 		<p class="links">
-			<a href="http://github.com/simonbaird">github.com/simonbaird</a>
-		</p>
+			<a href="http://github.com/simonbaird">code</a> |
+			<a href="http://twitter.com/simonbaird">twitter</a> |
+			<a href="http://glosoli.blogspot.com">blog</a>
+			<br/>
+			<br/>
+			<a href="http://tiddlyspot.com">tiddlyspot</a> |
+			<a href="http://mgsd.tiddlyspot.com">mgsd</a> |
+			<a href="http://mptw.tiddlyspot.com">mptw</a> |
+			<a href="http://randomibis.com/coolclock">coolclock</a>
+		</ul>
 	</div>
-	<canvas class="CoolClock:fooskin:150"></canvas>
+	<canvas style="z-index:-100;position:absolute;top:-10px;left:-5px" class="CoolClock:fooskin:150"></canvas>
+	<br style="clear:both" />
 </div>
 </body>
 </html>
