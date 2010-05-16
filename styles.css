@@ -52,6 +52,7 @@ body {
 	color:#eee;
 	font-size:200%;
 	font-weight:bold;
+	z-index:-20;
 }
 
 small {
