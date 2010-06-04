@@ -9,11 +9,13 @@
 <script type="text/javascript" src="http://randomibis.com/coolclock/coolclock.js"></script>
 <script type="text/javascript">
 
+var colors = 'magenta orange red blue green teal'.split(/\s/).sort(function(){ return 0.5 - Math.random(); });
+
 $.extend(CoolClock.config.skins,{
 	fooskin: {
-		hourHand:         { lineWidth: 80, startAt: -15, endAt: 35,  color: "cyan",    alpha: 0.5 },
-		minuteHand:       { lineWidth: 80, startAt: -15, endAt: 65,  color: "magenta", alpha: 0.5 },
-		secondDecoration: { lineWidth: 1,  startAt: 40,  radius: 40, color: "#fff", fillColor: "yellow", alpha: 0.5 }
+		hourHand:         { lineWidth: 80, startAt: -15, endAt: 35,  color: colors[0], alpha: 0.5 },
+		minuteHand:       { lineWidth: 80, startAt: -15, endAt: 65,  color: colors[1], alpha: 0.5 },
+		secondDecoration: { lineWidth: 1,  startAt: 40,  radius: 40, color: "#fff", fillColor: colors[2], alpha: 0.5 }
 	}
 });
 
@@ -36,10 +38,10 @@ $(function(){
 <div class="wrapper">
 	<div class="message">
 		<p class="title">simonbaird.com</p>
-		<p style="visibility:hidden" id="showlink">simonbaird.com</p>
+		<p style="visibility:hidden" id="showlink">&nbsp;</p>
 		<p class="links">
 			<a href="http://github.com/simonbaird">code</a> |
-			<a href="http://twitter.com/simonbaird">twitter</a> |
+			<a href="http://twitter.com/simonbaird">tweets</a> |
 			<a href="http://glosoli.blogspot.com">blog</a>
 			<br/>
 			<br/>
@@ -47,7 +49,7 @@ $(function(){
 			<a href="http://mgsd.tiddlyspot.com">mgsd</a> |
 			<a href="http://mptw.tiddlyspot.com">mptw</a> |
 			<a href="http://randomibis.com/coolclock">coolclock</a>
-		</ul>
+		</p>
 	</div>
 	<canvas style="z-index:-100;position:absolute;top:-10px;left:-5px" class="CoolClock:fooskin:150"></canvas>
 	<br style="clear:both" />

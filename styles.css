@@ -3,28 +3,24 @@ body {
 	font-family:sans-serif;
 	font-size:110%;
 	padding:2em 3em 4em;
-	background-color:#e7cfa4;
-	background-image:url(http://simonbaird.com/cv/bg-desk.png);
+	background-color:#ddd;
 }
 
 .wrapper {
 	background-color:white;
 	padding:0;
-	padding-bottom:1em;
+	padding-bottom:0.5em;
 	margin:auto;
 	width:530px;
 
-	/* border-radius */
 	-webkit-border-radius: 5px;
 	-moz-border-radius:    5px;
 	border-radius:         5px;
 
-	/* box-shadow */
-	-webkit-box-shadow: rgba(0,0,0,0.5) 0px 1px 3px;
-	-moz-box-shadow:    rgba(0,0,0,0.5) 0px 1px 3px;
-	box-shadow:         rgba(0,0,0,0.5) 0px 1px 3px;
+	-webkit-box-shadow: rgba(0,0,0,0.2) 2px 2px 8px;
+	-moz-box-shadow:    rgba(0,0,0,0.2) 2px 2px 8px;
+	box-shadow:         rgba(0,0,0,0.2) 2px 2px 8px;
 
-	/* rotate */
 	-webkit-transform: rotate(-0.5deg);
 	-moz-transform:    rotate(-0.5deg);
 	transform:         rotate(-0.5deg);
@@ -32,7 +28,7 @@ body {
 }
 
 .message {
-	padding-top:2em;
+	padding-top:1.5em;
 	padding-right:3em;
 	text-align:right;
 }
@@ -40,7 +36,7 @@ body {
 .title {
 	font-size:120%;
 	margin-bottom:4em;
-	color:#999;
+	color:#aaa;
 	font-weight:bold;
 }
 
@@ -49,10 +45,11 @@ body {
 }
 
 #showlink {
-	color:#eee;
+	color:#fff;
 	font-size:200%;
 	font-weight:bold;
 	z-index:-20;
+	text-shadow: #ccc 2px 2px 4px;
 }
 
 small {
