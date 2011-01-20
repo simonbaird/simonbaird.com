@@ -23,7 +23,7 @@ $(function(){
 	var link = $(this).attr('href');
 	$('.links a').hover(
 		function(){
-			var link = $(this).attr('href').replace(/^http:\/\//,'');
+			var link = $(this).attr('href').replace(/^http:\/\//,'').replace(/(.wordpress.com)/,'.wp.com');
 			$('#showlink').css('visibility','visible').stop().html(link).fadeTo('fast',1.0);
 		},
 		function(){
@@ -41,9 +41,10 @@ $(function(){
 		<p style="visibility:hidden" id="showlink">&nbsp;</p>
 		<p class="links">
 			<a href="http://github.com/simonbaird">code</a> |
-			<a href="http://twitter.com/simonbaird">tweets</a> |
 			<a href="http://simonbaird.blogspot.com">blog</a> |
-			<a href="http://randomibis.blogspot.com">blog</a>
+			<a href="http://randomibis.blogspot.com">blog</a> |
+			<a href="http://visitthemiddleeast.wordpress.com">tme</a> |
+			<a href="http://twitter.com/simonbaird">tweets</a>
 			<br/>
 			<br/>
 			<a href="http://tiddlyspot.com">tiddlyspot</a> |
