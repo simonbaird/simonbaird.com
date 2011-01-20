@@ -20,9 +20,9 @@ body {
 	-moz-box-shadow:    rgba(0,0,0,0.9) 2px 2px 8px;
 	box-shadow:         rgba(0,0,0,0.9) 2px 2px 8px;
 
-	-webkit-transform: rotate(-2deg);
-	-moz-transform:    rotate(-2deg);
-	transform:         rotate(-2deg);
+	-webkit-transform: rotate(-0.5deg);
+	-moz-transform:    rotate(-0.5deg);
+	transform:         rotate(-0.5deg);
 
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 .title {
-	font-size:120%;
+	font-size:140%;
 	margin-bottom:4em;
 	color:#aaa;
 	font-weight:bold;
@@ -41,6 +41,8 @@ body {
 
 .links {
 	font-size:80%;
+  line-height:200%;
+  color:#ccc;
 }
 
 #showlink {
