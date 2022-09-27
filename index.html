@@ -12,48 +12,64 @@
 var colors = 'magenta orange red blue green teal'.split(/\s/).sort(function(){ return 0.5 - Math.random(); });
 
 $.extend(CoolClock.config.skins,{
-	fooskin: {
-		hourHand:         { lineWidth: 80, startAt: -15, endAt: 35,  color: colors[0], alpha: 0.5 },
-		minuteHand:       { lineWidth: 80, startAt: -15, endAt: 65,  color: colors[1], alpha: 0.5 },
-		secondDecoration: { lineWidth: 1,  startAt: 40,  radius: 40, color: "#fff", fillColor: colors[2], alpha: 0.5 }
-	}
+  fooskin: {
+    hourHand:         { lineWidth: 80, startAt: -15, endAt: 35,  color: colors[0], alpha: 0.5 },
+    minuteHand:       { lineWidth: 80, startAt: -15, endAt: 65,  color: colors[1], alpha: 0.5 },
+    secondDecoration: { lineWidth: 1,  startAt: 40,  radius: 40, color: "#fff", fillColor: colors[2], alpha: 0.5 }
+  }
 });
 
 $(function(){
-	var link = $(this).attr('href');
-	$('.links a').hover(
-		function(){
-			var link = $(this).attr('href').replace(/^http:\/\//,'').replace(/(.wordpress.com)/,'.wp.com');
-			$('#showlink').css('visibility','visible').stop().html(link).fadeTo('fast',1.0);
-		},
-		function(){
-			$('#showlink').stop().fadeTo('slow',0.0);
-		}
-	);
+  var link = $(this).attr('href');
+  $('.links a').hover(
+    function(){
+      var new_html =
+        '<p class="name">' + $(this).text() + '</p>' +
+        '<p class="blurb">' + $(this).attr('title') + '</p>' +
+        '<p class="url">' + $(this).attr('href').replace(/^http:\/\//,'') + '</p>' +
+        '';
+      $('#showlink').css('visibility', 'visible').stop().html(new_html).fadeTo('fast', 1.0);
+    },
+    function(){
+      $('#showlink').stop().fadeTo('slow',0.0);
+    }
+  );
 });
 
 </script>
 </head>
 <body>
 <div class="wrapper">
-	<div class="message">
-		<p class="title">simonbaird.com</p>
-		<p style="visibility:hidden" id="showlink">&nbsp;</p>
-		<p class="links">
-			<a href="http://github.com/simonbaird">code</a> &bull;
-			<a href="http://simonbaird.blogspot.com">blog</a> &bull;
-			<a href="http://visitthemiddleeast.wordpress.com">tme</a> &bull;
-			<a href="http://randomibis.blogspot.com">blog</a>  &bull;
-			<a href="http://twitter.com/simonbaird">tweets</a>
-			<br/>
-			<a href="http://randomibis.com/coolclock">coolclock</a> &bull;
-			<a href="http://tiddlyspot.com">tiddlyspot</a> &bull;
-			<a href="http://mgsd.tiddlyspot.com">mgsd</a> &bull;
-			<a href="http://mptw.tiddlyspot.com">mptw</a>
-		</p>
-	</div>
-	<canvas style="z-index:-100;position:absolute;top:-10px;left:-5px" class="CoolClock:fooskin:150"></canvas>
-	<br style="clear:both" />
+  <div class="message">
+    <p class="title">simon baird</p>
+    <div style="visibility:hidden" id="showlink">
+      <p class='name'>&nbsp;</p>
+      <p class='blurb'>&nbsp;</p>
+      <p class='url'>&nbsp;</p>
+    </div>
+    <div class="links">
+      code: &nbsp;
+      <a title="my code on Github" href="http://github.com/simonbaird">github</a> &bull;
+      <a title="programming blog, mostly ruby and javascript" href="http://simonbaird.blogspot.com">blog</a>
+      <br/>
+      projects: &nbsp;
+      <a title="simple TiddlyWiki hosting (2021)" href="http://tiddlyhost.com">tiddlyhost</a> &bull;
+      <a title="simple TiddlyWiki hosting (2006)" href="http://tiddlyspot.com">tiddlyspot</a> &bull;
+      <a title="an analog clock using javascript and canvas" href="http://randomibis.com/coolclock">coolclock</a>
+      <br/>
+      <a title="a GTD system built with TiddlyWiki Classic" href="http://mgsd.tiddlyspot.com">mgsd</a> &bull;
+      <a title="a finely tuned set of TiddlyWiki Classic plugins" href="http://mptw.tiddlyspot.com">mptw</a> &bull;
+      <a title="a Ruby gem for ActiveSupport" href="http://github.com/simonbaird/beginning_of_fortnight">beginning_of_fortnight</a>
+      <br/>
+      etc: &nbsp;
+      <a title="misc pics of boston, brisbane, and etc" href="http://instagram.com/randomibis">instagram</a> &bull;
+      <a title="tweets" href="http://twitter.com/simonbaird">twitter</a> &bull;
+      <a title="photos and the occasional timelapse video" href="http://randomibis.blogspot.com">blog</a> &bull;
+      <a title="about a band called The Middle East" href="http://visitthemiddleeast.wordpress.com">tme</a>
+    </div>
+  </div>
+  <canvas style="z-index:100;position:absolute;top:0px;left:0px" class="CoolClock:fooskin:150"></canvas>
+  <br style="clear:both" />
 </div>
 </body>
 </html>

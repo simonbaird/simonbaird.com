@@ -1,65 +1,87 @@
 
 body {
-	font-family:sans-serif;
-	font-size:110%;
-	padding:2em 3em 4em;
-	background-color:#333;
+  font-family:sans-serif;
+  font-size:110%;
+  padding:2em 3em 4em;
+  background-color:#333;
+  /* background-image:url(/cv/bg.png); */
 }
 
 .wrapper {
-	background-color:white;
-	padding:0;
-	padding-bottom:0.5em;
-	width:530px;
+  background-color:white;
+  padding:0;
+  padding-bottom:0.5em;
+  width:530px;
 
-	-webkit-border-radius: 5px;
-	-moz-border-radius:    5px;
-	border-radius:         5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius:    5px;
+  border-radius:         5px;
 
-	-webkit-box-shadow: rgba(0,0,0,0.9) 2px 2px 8px;
-	-moz-box-shadow:    rgba(0,0,0,0.9) 2px 2px 8px;
-	box-shadow:         rgba(0,0,0,0.9) 2px 2px 8px;
+  -webkit-box-shadow: rgba(0,0,0,0.9) 2px 2px 8px;
+  -moz-box-shadow:    rgba(0,0,0,0.9) 2px 2px 8px;
+  box-shadow:         rgba(0,0,0,0.9) 2px 2px 8px;
 
-	-webkit-transform: rotate(-0.5deg);
-	-moz-transform:    rotate(-0.5deg);
-	transform:         rotate(-0.5deg);
+  /*
+  -webkit-transform: rotate(-0.5deg);
+  -moz-transform:    rotate(-0.5deg);
+  transform:         rotate(-0.5deg);
+  */
 
 }
 
 .message {
-	padding-top:1.5em;
-	padding-right:3em;
-	text-align:right;
+  padding-top:1.5em;
+  padding-right:3em;
+  text-align:right;
 }
 
 .title {
-	font-size:130%;
-	margin-bottom:2em;
-	color:#aaa;
-	font-weight:bold;
-	padding-right:0.5em;
+  font-size:100%;
+  margin-bottom:2em;
+  color:#ddd;
+  font-weight:bold;
+  padding-right:0.5em;
 }
 
 .links {
-	font-size:80%;
+  font-size:80%;
   line-height:200%;
   color:#ccc;
 }
 
 #showlink {
-	color:#fff;
-	font-size:200%;
-	font-weight:bold;
-	z-index:-20;
-	text-shadow: #ccc 2px 2px 4px;
+  padding:0.5em 0 1em 0;
+  z-index:2000;
+}
+
+#showlink p {
+  margin:0;
+  padding:0;
+}
+#showlink .name {
+  color:#fff;
+  font-weight:bold;
+  text-shadow: #888 2px 2px 4px;
+  font-size:180%;
+  padding-bottom:0.1em;
+  padding-top:0.5em;
+}
+#showlink .url {
+  color:#bbb;
+  font-size:50%;
+}
+
+#showlink .blurb {
+  color:#666;
+  font-size:70%;
 }
 
 small {
-	font-size:80%;
+  font-size:80%;
 }
 
 a {
-	text-decoration:none;
+  text-decoration:none;
 }
 
 a:hover {
